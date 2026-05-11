@@ -1,0 +1,113 @@
+{
+  "metadata": {
+    "title": "MEM - Natural Handmade Soaps",
+    "description": "Handmade soaps crafted with love and 100% natural ingredients. Discover our collection of organic products for your skin care."
+  },
+  "nav": {
+    "home": "Home",
+    "products": "Products",
+    "about": "About",
+    "contact": "Contact"
+  },
+  "hero": {
+    "title": "Handmade Soaps",
+    "subtitle": "Crafted with love and natural ingredients",
+    "description": "Discover our collection of organic soaps, handmade with the finest natural ingredients for your skin care.",
+    "ctaPrimary": "View Products",
+    "ctaSecondary": "Learn More"
+  },
+  "stats": {
+    "products": "Products",
+    "productsCount": "20+",
+    "natural": "Natural",
+    "naturalPercent": "100%",
+    "handmade": "Handmade",
+    "handmadeText": "Handcrafted",
+    "happy": "Customers",
+    "happyCount": "500+"
+  },
+  "products": {
+    "title": "Our Products",
+    "subtitle": "Every soap is a work of art",
+    "viewAll": "View All",
+    "addToCart": "Add to Cart",
+    "viewDetails": "View Details",
+    "categories": {
+      "all": "All",
+      "facial": "Facial",
+      "body": "Body",
+      "special": "Special"
+    }
+  },
+  "features": {
+    "title": "Why Choose MEM?",
+    "subtitle": "Committed to quality and the environment",
+    "items": {
+      "natural": {
+        "title": "100% Natural",
+        "description": "Organic ingredients without harmful chemicals"
+      },
+      "handmade": {
+        "title": "Handcrafted",
+        "description": "Artisan made with dedication"
+      },
+      "eco": {
+        "title": "Eco Friendly",
+        "description": "Sustainable and biodegradable packaging"
+      },
+      "cruelty": {
+        "title": "Cruelty Free",
+        "description": "Not tested on animals"
+      }
+    }
+  },
+  "about": {
+    "title": "Our Story",
+    "subtitle": "More than soaps, a passion",
+    "description": "MEM was born from a love of natural products and conscious skin care. Each soap is handmade with carefully selected ingredients.",
+    "values": {
+      "title": "Our Values",
+      "quality": "Premium Quality",
+      "sustainability": "Sustainability",
+      "community": "Community"
+    }
+  },
+  "contact": {
+    "title": "Contact Us",
+    "subtitle": "We're here to help",
+    "form": {
+      "name": "Name",
+      "email": "Email",
+      "message": "Message",
+      "submit": "Send Message",
+      "success": "Message sent successfully!",
+      "error": "There was an error. Please try again."
+    },
+    "info": {
+      "email": "Email",
+      "phone": "Phone",
+      "address": "Address"
+    }
+  },
+  "newsletter": {
+    "title": "Join Our Community",
+    "subtitle": "Subscribe to receive exclusive offers and news",
+    "placeholder": "Your email",
+    "button": "Subscribe",
+    "success": "Thank you for subscribing!",
+    "privacy": "We respect your privacy"
+  },
+  "footer": {
+    "description": "Handmade soaps crafted with 100% natural ingredients.",
+    "links": {
+      "title": "Links",
+      "shop": "Shop",
+      "about": "About",
+      "contact": "Contact"
+    },
+    "social": {
+      "title": "Follow Us"
+    },
+    "rights": "All rights reserved."
+  }
+}

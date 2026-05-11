@@ -1,0 +1,76 @@
+{
+  "products": [
+    {
+      "id": "1",
+      "name": "Jabón de Lavanda",
+      "slug": "lavanda",
+      "price": 12.00,
+      "stock": 15,
+      "image": "/images/products/lavanda.png",
+      "description": "Jabón artesanal con esencia de lavanda natural. Propiedades relajantes y aromáticas perfectas para un baño calmante.",
+      "category": "Aromaterapia",
+      "ingredients": ["Aceite de coco", "Esencia de lavanda", "Glicerina vegetal"],
+      "weight": "100g"
+    },
+    {
+      "id": "2",
+      "name": "Jabón de Marsella",
+      "slug": "marselle",
+      "price": 14.00,
+      "stock": 8,
+      "image": "/images/products/marselle.png",
+      "description": "Jabón tradicional de Marsella, suave y delicado. Ideal para pieles sensibles.",
+      "category": "Clásicos",
+      "ingredients": ["Aceite de oliva", "Glicerina", "Agua de manantial"],
+      "weight": "120g"
+    },
+    {
+      "id": "3",
+      "name": "Jabón de Aloe Vera",
+      "slug": "aloe",
+      "price": 13.00,
+      "stock": 0,
+      "image": "/images/products/aloe.png",
+      "description": "Jabón hidratante con aloe vera orgánico. Ideal para pieles sensibles y necesitadas de hidratación.",
+      "category": "Hidratantes",
+      "ingredients": ["Aloe vera orgánico", "Aceite de almendras", "Vitamina E"],
+      "weight": "100g"
+    },
+    {
+      "id": "4",
+      "name": "Jabón de Romero",
+      "slug": "romero",
+      "price": 13.50,
+      "stock": 20,
+      "image": "/images/products/romero.png",
+      "description": "Jabón revitalizante con esencia de romero. Estimula la circulación y aporta frescura.",
+      "category": "Revitalizantes",
+      "ingredients": ["Esencia de romero", "Aceite de oliva", "Menta"],
+      "weight": "100g"
+    },
+    {
+      "id": "5",
+      "name": "Jabón de Rosa Mosqueta",
+      "slug": "rosa-mosqueta",
+      "price": 15.00,
+      "stock": 5,
+      "image": "/images/products/rosa-mosqueta.png",
+      "description": "Jabón regenerador con rosa mosqueta. Propiedades anti-edad y regeneradoras.",
+      "category": "Regeneradores",
+      "ingredients": ["Aceite de rosa mosqueta", "Vitamina C", "Colágeno vegetal"],
+      "weight": "100g"
+    },
+    {
+      "id": "6",
+      "name": "Jabón de Avena",
+      "slug": "avena",
+      "price": 11.50,
+      "stock": 25,
+      "image": "/images/products/avena.png",
+      "description": "Jabón exfoliante suave con avena natural. Perfecto para una limpieza profunda y delicada.",
+      "category": "Exfoliantes",
+      "ingredients": ["Avena en copos", "Miel", "Leche de cabra"],
+      "weight": "110g"
+    }
+  ]
+}

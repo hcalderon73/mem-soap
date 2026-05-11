@@ -1,0 +1,113 @@
+{
+  "metadata": {
+    "title": "MEM - Jabones Artesanales Naturales",
+    "description": "Jabones artesanales elaborados con amor y ingredientes 100% naturales. Descubre nuestra colección de productos orgánicos para el cuidado de tu piel."
+  },
+  "nav": {
+    "home": "Inicio",
+    "products": "Productos",
+    "about": "Nosotros",
+    "contact": "Contacto"
+  },
+  "hero": {
+    "title": "Jabones Artesanales",
+    "subtitle": "Elaborados con amor e ingredientes naturales",
+    "description": "Descubre nuestra colección de jabones orgánicos, hechos a mano con los mejores ingredientes naturales para el cuidado de tu piel.",
+    "ctaPrimary": "Ver Productos",
+    "ctaSecondary": "Conoce Más"
+  },
+  "stats": {
+    "products": "Productos",
+    "productsCount": "20+",
+    "natural": "Natural",
+    "naturalPercent": "100%",
+    "handmade": "Artesanal",
+    "handmadeText": "Hecho a mano",
+    "happy": "Clientes",
+    "happyCount": "500+"
+  },
+  "products": {
+    "title": "Nuestros Productos",
+    "subtitle": "Cada jabón es una obra de arte",
+    "viewAll": "Ver Todos",
+    "addToCart": "Añadir al Carrito",
+    "viewDetails": "Ver Detalles",
+    "categories": {
+      "all": "Todos",
+      "facial": "Facial",
+      "body": "Corporal",
+      "special": "Especiales"
+    }
+  },
+  "features": {
+    "title": "¿Por qué elegir MEM?",
+    "subtitle": "Comprometidos con la calidad y el medio ambiente",
+    "items": {
+      "natural": {
+        "title": "100% Natural",
+        "description": "Ingredientes orgánicos sin químicos dañinos"
+      },
+      "handmade": {
+        "title": "Hecho a Mano",
+        "description": "Elaborados artesanalmente con dedicación"
+      },
+      "eco": {
+        "title": "Eco Friendly",
+        "description": "Empaques sostenibles y biodegradables"
+      },
+      "cruelty": {
+        "title": "Cruelty Free",
+        "description": "No testado en animales"
+      }
+    }
+  },
+  "about": {
+    "title": "Nuestra Historia",
+    "subtitle": "Más que jabones, una pasión",
+    "description": "MEM nace del amor por los productos naturales y el cuidado consciente de la piel. Cada jabón es elaborado a mano con ingredientes seleccionados cuidadosamente.",
+    "values": {
+      "title": "Nuestros Valores",
+      "quality": "Calidad Premium",
+      "sustainability": "Sostenibilidad",
+      "community": "Comunidad"
+    }
+  },
+  "contact": {
+    "title": "Contáctanos",
+    "subtitle": "Estamos aquí para ayudarte",
+    "form": {
+      "name": "Nombre",
+      "email": "Email",
+      "message": "Mensaje",
+      "submit": "Enviar Mensaje",
+      "success": "¡Mensaje enviado con éxito!",
+      "error": "Hubo un error. Por favor intenta de nuevo."
+    },
+    "info": {
+      "email": "Email",
+      "phone": "Teléfono",
+      "address": "Dirección"
+    }
+  },
+  "newsletter": {
+    "title": "Únete a Nuestra Comunidad",
+    "subtitle": "Suscríbete para recibir ofertas exclusivas y novedades",
+    "placeholder": "Tu email",
+    "button": "Suscribirse",
+    "success": "¡Gracias por suscribirte!",
+    "privacy": "Respetamos tu privacidad"
+  },
+  "footer": {
+    "description": "Jabones artesanales elaborados con ingredientes 100% naturales.",
+    "links": {
+      "title": "Enlaces",
+      "shop": "Tienda",
+      "about": "Nosotros",
+      "contact": "Contacto"
+    },
+    "social": {
+      "title": "Síguenos"
+    },
+    "rights": "Todos los derechos reservados."
+  }
+}
