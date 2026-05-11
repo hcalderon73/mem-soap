@@ -1,8 +1,21 @@
 import { NextResponse } from 'next/server';
-import { sendContactEmail } from '@/lib/resend';
+
+// Check if Resend API key is configured
+const RESEND_API_KEY = process.env.RESEND_API_KEY;
 
 export async function POST(request: Request) {
   try {
+    // Check if API key is available
+    if (!RESEND_API_KEY) {
+      return NextResponse.json(
+        { error: 'Email service not configured. Please add RESEND_API_KEY environment variable.' },
+        { status: 503 }
+      );
+    }
+
+    // Dynamically import resend only when needed
+    const { sendContactEmail } = await import('@/lib/resend');
+
     const body = await request.json();
     const { name, email, message } = body;
 
