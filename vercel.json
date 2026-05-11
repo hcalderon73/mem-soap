@@ -1,0 +1,7 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "buildCommand": "cd mem-jabones && npm install && npm run build",
+  "outputDirectory": "mem-jabones/.next",
+  "framework": "nextjs",
+  "installCommand": "cd mem-jabones && npm install"
+}
