@@ -71,7 +71,7 @@ export default function HomePage() {
             <div className="relative">
               <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl">
                 <Image
-                  src="/images/hero/hero-image.jpg"
+                  src="/images/hero/hero-image.png"
                   alt="Elaboración artesanal de jabones MEM"
                   fill
                   className="object-cover"
