@@ -107,9 +107,13 @@
     "values": {
       "title": "Nuestros Valores",
       "quality": "Calidad Premium",
+      "qualityDesc": "Seleccionamos los mejores ingredientes naturales para cada jabón.",
       "sustainability": "Sostenibilidad",
-      "community": "Comunidad"
-    }
+      "sustainabilityDesc": "Comprometidos con prácticas sostenibles y respetuosas con el medio ambiente.",
+      "community": "Comunidad",
+      "communityDesc": "Construimos relaciones duraderas con nuestros clientes y proveedores."
+    },
+    "storyImage": "Imagen de la historia"
   },
   "contact": {
     "title": "Contáctanos",
@@ -147,7 +151,8 @@
       "contact": "Contacto"
     },
     "social": {
-      "title": "Síguenos"
+      "title": "Síguenos",
+      "description": "Síguenos en redes sociales para no perderte nuestras novedades."
     },
     "rights": "Todos los derechos reservados."
   }

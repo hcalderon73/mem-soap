@@ -25,7 +25,7 @@ export default function AboutPage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto">
             <div className="aspect-video bg-cream-200 rounded-2xl mb-12 flex items-center justify-center">
-              <span className="text-stone-400">Imagen de la historia</span>
+              <span className="text-stone-400">{t('storyImage')}</span>
             </div>
             <p className="text-lg text-stone-600 leading-relaxed mb-8">
               {t('description')}
@@ -49,7 +49,7 @@ export default function AboutPage() {
                 {t('values.quality')}
               </h3>
               <p className="text-stone-600">
-                Seleccionamos los mejores ingredientes naturales para cada jabón.
+                {t('values.qualityDesc')}
               </p>
             </div>
             <div className="text-center p-8">
@@ -60,7 +60,7 @@ export default function AboutPage() {
                 {t('values.sustainability')}
               </h3>
               <p className="text-stone-600">
-                Comprometidos con prácticas sostenibles y respetuosas con el medio ambiente.
+                {t('values.sustainabilityDesc')}
               </p>
             </div>
             <div className="text-center p-8">
@@ -71,7 +71,7 @@ export default function AboutPage() {
                 {t('values.community')}
               </h3>
               <p className="text-stone-600">
-                Construimos relaciones duraderas con nuestros clientes y proveedores.
+                {t('values.communityDesc')}
               </p>
             </div>
           </div>

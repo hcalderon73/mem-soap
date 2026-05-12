@@ -107,9 +107,13 @@
     "values": {
       "title": "Our Values",
       "quality": "Premium Quality",
+      "qualityDesc": "We select the best natural ingredients for each soap.",
       "sustainability": "Sustainability",
-      "community": "Community"
-    }
+      "sustainabilityDesc": "Committed to sustainable and environmentally friendly practices.",
+      "community": "Community",
+      "communityDesc": "We build lasting relationships with our customers and suppliers."
+    },
+    "storyImage": "Our story image"
   },
   "contact": {
     "title": "Contact Us",
@@ -147,7 +151,8 @@
       "contact": "Contact"
     },
     "social": {
-      "title": "Follow Us"
+      "title": "Follow Us",
+      "description": "Follow us on social media to stay updated with our latest news."
     },
     "rights": "All rights reserved."
   }

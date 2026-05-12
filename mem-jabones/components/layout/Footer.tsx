@@ -97,7 +97,7 @@ export default function Footer() {
           <div>
             <h3 className="text-lg font-semibold mb-4">{t('social.title')}</h3>
             <p className="text-stone-400 text-sm mb-4">
-              Síguenos en redes sociales para no perderte nuestras novedades.
+              {t('social.description')}
             </p>
           </div>
         </div>
