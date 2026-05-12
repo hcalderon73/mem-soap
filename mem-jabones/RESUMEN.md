@@ -92,7 +92,7 @@ mem-jabones/
 - ✅ **Formulario de contacto**: Integración con Resend API
 - ✅ **Estadísticas**: Sección de contadores
 - ✅ **Features**: Sección de beneficios con iconos
-- ✅ **Newsletter**: Sección de suscripción
+
 - ✅ **Footer**: Completo con links e info de contacto
 
 ### Rutas Disponibles
@@ -141,7 +141,7 @@ mem-jabones/
 ## 📝 Contenido de Ejemplo
 
 Las páginas incluyen:
-- **Homepage**: Hero, estadísticas, features, newsletter
+- **Homepage**: Hero, estadísticas, features
 - **Productos**: Grid de 6 productos placeholder
 - **Producto**: Layout de detalle con imagen e info
 - **Nosotros**: Historia y valores

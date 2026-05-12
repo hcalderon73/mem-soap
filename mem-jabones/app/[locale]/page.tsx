@@ -122,33 +122,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-20 bg-primary-600">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            {t('newsletter.title')}
-          </h2>
-          <p className="text-primary-100 text-lg mb-8 max-w-2xl mx-auto">
-            {t('newsletter.subtitle')}
-          </p>
-          <form className="max-w-md mx-auto flex flex-col sm:flex-row gap-3">
-            <input
-              type="email"
-              placeholder={t('newsletter.placeholder')}
-              className="flex-1 px-6 py-4 rounded-full text-stone-800 focus:outline-none focus:ring-2 focus:ring-primary-300"
-            />
-            <button
-              type="submit"
-              className="px-8 py-4 bg-stone-900 text-white font-semibold rounded-full hover:bg-stone-800 transition-colors duration-200"
-            >
-              {t('newsletter.button')}
-            </button>
-          </form>
-          <p className="text-primary-200 text-sm mt-4">
-            {t('newsletter.privacy')}
-          </p>
-        </div>
-      </section>
+
     </div>
   );
 }

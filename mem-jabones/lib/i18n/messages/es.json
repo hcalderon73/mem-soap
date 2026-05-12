@@ -134,14 +134,7 @@
     },
     "mapPlaceholder": "Mapa de ubicación"
   },
-  "newsletter": {
-    "title": "Únete a Nuestra Comunidad",
-    "subtitle": "Suscríbete para recibir ofertas exclusivas y novedades",
-    "placeholder": "Tu email",
-    "button": "Suscribirse",
-    "success": "¡Gracias por suscribirte!",
-    "privacy": "Respetamos tu privacidad"
-  },
+
   "footer": {
     "description": "Jabones artesanales elaborados con ingredientes 100% naturales.",
     "links": {

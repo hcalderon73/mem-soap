@@ -134,14 +134,7 @@
     },
     "mapPlaceholder": "Location map"
   },
-  "newsletter": {
-    "title": "Join Our Community",
-    "subtitle": "Subscribe to receive exclusive offers and news",
-    "placeholder": "Your email",
-    "button": "Subscribe",
-    "success": "Thank you for subscribing!",
-    "privacy": "We respect your privacy"
-  },
+
   "footer": {
     "description": "Handmade soaps crafted with 100% natural ingredients.",
     "links": {
