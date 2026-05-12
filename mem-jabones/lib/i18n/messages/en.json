@@ -22,9 +22,7 @@
     "natural": "Natural",
     "naturalPercent": "100%",
     "handmade": "Handmade",
-    "handmadeText": "Handcrafted",
-    "happy": "Customers",
-    "happyCount": "500+"
+    "handmadeText": "Handcrafted"
   },
   "products": {
     "title": "Our Products",

@@ -80,7 +80,7 @@ export default function HomePage() {
       {/* Stats Section */}
       <section className="py-12 bg-white border-y border-stone-100">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="text-center">
               <p className="text-4xl font-bold text-primary-600">{t('stats.productsCount')}</p>
               <p className="text-stone-600">{t('stats.products')}</p>
@@ -92,10 +92,6 @@ export default function HomePage() {
             <div className="text-center">
               <p className="text-4xl font-bold text-primary-600">{t('stats.handmadeText')}</p>
               <p className="text-stone-600">{t('stats.handmade')}</p>
-            </div>
-            <div className="text-center">
-              <p className="text-4xl font-bold text-primary-600">{t('stats.happyCount')}</p>
-              <p className="text-stone-600">{t('stats.happy')}</p>
             </div>
           </div>
         </div>
