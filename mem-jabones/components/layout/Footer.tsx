@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import Image from 'next/image';
-import { Instagram, Facebook, Mail, Phone, MapPin } from 'lucide-react';
+import { Instagram, Facebook, Twitter, Mail, Phone, MapPin } from 'lucide-react';
 import { useLocale, useTranslations } from '@/lib/i18n/useTranslations';
 
 export default function Footer() {
@@ -27,22 +27,6 @@ export default function Footer() {
             <p className="text-stone-400 text-sm leading-relaxed">
               {t('description')}
             </p>
-            <div className="flex space-x-4 pt-2">
-              <a 
-                href="#" 
-                className="text-stone-400 hover:text-primary-400 transition-colors"
-                aria-label="Instagram"
-              >
-                <Instagram className="h-5 w-5" />
-              </a>
-              <a 
-                href="#" 
-                className="text-stone-400 hover:text-primary-400 transition-colors"
-                aria-label="Facebook"
-              >
-                <Facebook className="h-5 w-5" />
-              </a>
-            </div>
           </div>
 
           {/* Links */}
@@ -95,12 +79,35 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Newsletter Mini */}
+          {/* Social Media */}
           <div>
             <h3 className="text-lg font-semibold mb-4">{t('social.title')}</h3>
             <p className="text-stone-400 text-sm mb-4">
               {t('social.description')}
             </p>
+            <div className="flex space-x-4">
+              <a 
+                href="#" 
+                className="w-10 h-10 rounded-full bg-stone-800 flex items-center justify-center text-stone-400 hover:bg-primary-600 hover:text-white transition-all duration-200"
+                aria-label="Instagram"
+              >
+                <Instagram className="h-5 w-5" />
+              </a>
+              <a 
+                href="#" 
+                className="w-10 h-10 rounded-full bg-stone-800 flex items-center justify-center text-stone-400 hover:bg-primary-600 hover:text-white transition-all duration-200"
+                aria-label="Facebook"
+              >
+                <Facebook className="h-5 w-5" />
+              </a>
+              <a 
+                href="#" 
+                className="w-10 h-10 rounded-full bg-stone-800 flex items-center justify-center text-stone-400 hover:bg-primary-600 hover:text-white transition-all duration-200"
+                aria-label="Twitter"
+              >
+                <Twitter className="h-5 w-5" />
+              </a>
+            </div>
           </div>
         </div>
 
