@@ -1,0 +1,76 @@
+{
+  "products": [
+    {
+      "id": "1",
+      "name": "Lavender Soap",
+      "slug": "lavanda",
+      "price": 12.00,
+      "stock": 15,
+      "image": "/images/products/lavanda.png",
+      "description": "Artisanal soap with natural lavender essence. Relaxing and aromatic properties perfect for a calming bath.",
+      "category": "Aromatherapy",
+      "ingredients": ["Coconut oil", "Lavender essence", "Vegetable glycerin"],
+      "weight": "100g"
+    },
+    {
+      "id": "2",
+      "name": "Marseille Soap",
+      "slug": "marselle",
+      "price": 14.00,
+      "stock": 8,
+      "image": "/images/products/marselle.png",
+      "description": "Traditional Marseille soap, soft and delicate. Ideal for sensitive skin.",
+      "category": "Classics",
+      "ingredients": ["Olive oil", "Glycerin", "Spring water"],
+      "weight": "120g"
+    },
+    {
+      "id": "3",
+      "name": "Aloe Vera Soap",
+      "slug": "aloe",
+      "price": 13.00,
+      "stock": 0,
+      "image": "/images/products/aloe.png",
+      "description": "Hydrating soap with organic aloe vera. Ideal for sensitive and dehydrated skin.",
+      "category": "Hydrating",
+      "ingredients": ["Organic aloe vera", "Almond oil", "Vitamin E"],
+      "weight": "100g"
+    },
+    {
+      "id": "4",
+      "name": "Rosemary Soap",
+      "slug": "romero",
+      "price": 13.50,
+      "stock": 20,
+      "image": "/images/products/romero.png",
+      "description": "Revitalizing soap with rosemary essence. Stimulates circulation and provides freshness.",
+      "category": "Revitalizing",
+      "ingredients": ["Rosemary essence", "Olive oil", "Mint"],
+      "weight": "100g"
+    },
+    {
+      "id": "5",
+      "name": "Rosehip Soap",
+      "slug": "rosa-mosqueta",
+      "price": 15.00,
+      "stock": 5,
+      "image": "/images/products/rosa-mosqueta.png",
+      "description": "Regenerating soap with rosehip. Anti-aging and regenerative properties.",
+      "category": "Regenerating",
+      "ingredients": ["Rosehip oil", "Vitamin C", "Vegetable collagen"],
+      "weight": "100g"
+    },
+    {
+      "id": "6",
+      "name": "Oatmeal Soap",
+      "slug": "avena",
+      "price": 11.50,
+      "stock": 25,
+      "image": "/images/products/avena.png",
+      "description": "Gentle exfoliating soap with natural oatmeal. Perfect for deep and delicate cleansing.",
+      "category": "Exfoliating",
+      "ingredients": ["Rolled oats", "Honey", "Goat milk"],
+      "weight": "110g"
+    }
+  ]
+}

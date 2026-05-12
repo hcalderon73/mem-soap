@@ -1,5 +1,5 @@
 import ProductPageContent from '@/components/product/ProductPageContent';
-import productsData from '@/data/products.json';
+import { getProducts, getProductBySlug } from '@/lib/data/products';
 
 interface PageProps {
   params: Promise<{ slug: string; locale: string }>;
@@ -8,9 +8,10 @@ interface PageProps {
 // Generate static params for product pages
 export function generateStaticParams() {
   const locales = ['es', 'en'];
+  const products = getProducts('es'); // Use Spanish products for slugs (they are the same)
   
   return locales.flatMap(locale => 
-    productsData.products.map(product => ({ 
+    products.map(product => ({ 
       slug: product.slug, 
       locale 
     }))
@@ -18,8 +19,8 @@ export function generateStaticParams() {
 }
 
 export default async function ProductPage({ params }: PageProps) {
-  const { slug } = await params;
-  const product = productsData.products.find(p => p.slug === slug);
+  const { slug, locale } = await params;
+  const product = getProductBySlug(locale, slug);
   
   if (!product) {
     // Return a default product if not found
@@ -27,10 +28,12 @@ export default async function ProductPage({ params }: PageProps) {
       <ProductPageContent 
         product={{
           id: '0',
-          name: 'Producto no encontrado',
+          name: locale === 'en' ? 'Product not found' : 'Producto no encontrado',
           price: 0,
           image: '/images/products/lavanda.png',
-          description: 'El producto que buscas no está disponible.',
+          description: locale === 'en' 
+            ? 'The product you are looking for is not available.' 
+            : 'El producto que buscas no está disponible.',
           stock: 0,
         }} 
         slug={slug} 

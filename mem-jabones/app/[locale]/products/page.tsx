@@ -4,15 +4,16 @@ import { useTranslations } from '@/lib/i18n/useTranslations';
 import { useCart } from '@/lib/cart/CartContext';
 import Link from 'next/link';
 import { useLocale } from '@/lib/i18n/useTranslations';
-import productsData from '@/data/products.json';
+import { getProducts, Product } from '@/lib/data/products';
 import { AlertCircle } from 'lucide-react';
 
 export default function ProductsPage() {
   const t = useTranslations('products');
   const { addItem, setIsOpen, items } = useCart();
   const locale = useLocale();
+  const products = getProducts(locale);
 
-  const handleAddToCart = (product: typeof productsData.products[0]) => {
+  const handleAddToCart = (product: Product) => {
     // Check if we can add more
     const cartItem = items.find(item => item.id === product.id);
     const currentQty = cartItem?.quantity || 0;
@@ -50,7 +51,7 @@ export default function ProductsPage() {
       <section className="py-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {productsData.products.map((product) => {
+            {products.map((product) => {
               const cartItem = items.find(item => item.id === product.id);
               const currentQty = cartItem?.quantity || 0;
               const availableStock = product.stock - currentQty;
