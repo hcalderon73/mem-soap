@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { useCart } from '@/lib/cart/CartContext';
 import { Minus, Plus, ShoppingCart, AlertCircle } from 'lucide-react';
+import { useTranslations } from '@/lib/i18n/useTranslations';
 
 interface ProductPageContentProps {
   product: {
@@ -22,6 +23,8 @@ interface ProductPageContentProps {
 export default function ProductPageContent({ product, slug }: ProductPageContentProps) {
   const { addItem, setIsOpen, items } = useCart();
   const [quantity, setQuantity] = useState(1);
+  const t = useTranslations('product');
+  const tProducts = useTranslations('products');
 
   // Check current quantity in cart
   const cartItem = items.find(item => item.id === product.id);
@@ -107,16 +110,16 @@ export default function ProductPageContent({ product, slug }: ProductPageContent
                 {isOutOfStock ? (
                   <span className="inline-flex items-center px-3 py-1 bg-red-100 text-red-700 text-sm font-medium rounded-full">
                     <AlertCircle className="w-4 h-4 mr-1" />
-                    Sin stock
+                    {t('outOfStock')}
                   </span>
                 ) : availableStock <= 5 ? (
                   <span className="inline-flex items-center px-3 py-1 bg-amber-100 text-amber-700 text-sm font-medium rounded-full">
                     <AlertCircle className="w-4 h-4 mr-1" />
-                    Solo quedan {availableStock} unidades
+                    {tProducts('stock.lowStock', { count: availableStock })}
                   </span>
                 ) : (
                   <span className="inline-flex items-center px-3 py-1 bg-green-100 text-green-700 text-sm font-medium rounded-full">
-                    En stock ({availableStock} disponibles)
+                    {tProducts('stock.inStock', { count: availableStock })}
                   </span>
                 )}
               </div>
@@ -128,7 +131,7 @@ export default function ProductPageContent({ product, slug }: ProductPageContent
               {/* Ingredients */}
               {product.ingredients && product.ingredients.length > 0 && (
                 <div className="space-y-2">
-                  <h3 className="font-semibold text-stone-800">Ingredientes:</h3>
+                  <h3 className="font-semibold text-stone-800">{t('ingredients')}:</h3>
                   <div className="flex flex-wrap gap-2">
                     {product.ingredients.map((ingredient, index) => (
                       <span 
@@ -145,13 +148,13 @@ export default function ProductPageContent({ product, slug }: ProductPageContent
               <div className="pt-4 space-y-6">
                 {/* Quantity Selector */}
                 <div className="flex items-center space-x-4">
-                  <span className="text-stone-700 font-medium">Cantidad:</span>
+                  <span className="text-stone-700 font-medium">{t('quantity')}:</span>
                   <div className="flex items-center border border-stone-300 rounded-lg">
                     <button
                       onClick={decreaseQuantity}
                       disabled={quantity <= 1 || isOutOfStock}
                       className="p-3 hover:bg-stone-100 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
-                      aria-label="Disminuir cantidad"
+                      aria-label={t('decreaseQty')}
                     >
                       <Minus className="h-4 w-4 text-stone-600" />
                     </button>
@@ -162,7 +165,7 @@ export default function ProductPageContent({ product, slug }: ProductPageContent
                       onClick={increaseQuantity}
                       disabled={quantity >= availableStock || isOutOfStock}
                       className="p-3 hover:bg-stone-100 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
-                      aria-label="Aumentar cantidad"
+                      aria-label={t('increaseQty')}
                     >
                       <Plus className="h-4 w-4 text-stone-600" />
                     </button>
@@ -178,10 +181,10 @@ export default function ProductPageContent({ product, slug }: ProductPageContent
                   <ShoppingCart className="h-5 w-5" />
                   <span>
                     {isOutOfStock 
-                      ? 'Sin stock' 
+                      ? t('outOfStock')
                       : !canAddMore 
-                        ? 'Máximo en carrito' 
-                        : 'Añadir al Carrito'}
+                        ? t('maxInCart')
+                        : t('addToCart')}
                   </span>
                 </button>
 
@@ -191,19 +194,19 @@ export default function ProductPageContent({ product, slug }: ProductPageContent
                     <svg className="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20">
                       <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                     </svg>
-                    100% Natural
+                    {t('natural')}
                   </span>
                   <span className="flex items-center">
                     <svg className="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20">
                       <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                     </svg>
-                    Hecho a mano
+                    {t('handmade')}
                   </span>
                   <span className="flex items-center">
                     <svg className="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20">
                       <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                     </svg>
-                    Eco-friendly
+                    {t('eco')}
                   </span>
                 </div>
               </div>

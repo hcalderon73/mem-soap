@@ -37,7 +37,42 @@
       "facial": "Facial",
       "body": "Body",
       "special": "Special"
+    },
+    "stock": {
+      "outOfStock": "Out of stock",
+      "lowStock": "Only {count} units left",
+      "inStock": "In stock ({count} available)",
+      "soldOut": "Sold out"
     }
+  },
+  "product": {
+    "ingredients": "Ingredients",
+    "quantity": "Quantity",
+    "decreaseQty": "Decrease quantity",
+    "increaseQty": "Increase quantity",
+    "addToCart": "Add to Cart",
+    "maxInCart": "Maximum in cart",
+    "outOfStock": "Out of stock",
+    "natural": "100% Natural",
+    "handmade": "Handmade",
+    "eco": "Eco-friendly"
+  },
+  "cart": {
+    "title": "Your Cart",
+    "close": "Close cart",
+    "empty": "Your cart is empty",
+    "emptyMessage": "Add some products!",
+    "continueShopping": "Continue Shopping",
+    "stockMax": "Maximum available",
+    "stockAvailable": "You can add {count} more",
+    "stockReached": "Maximum stock reached",
+    "decreaseQty": "Decrease quantity",
+    "increaseQty": "Increase quantity",
+    "remove": "Remove product",
+    "clear": "Clear cart",
+    "subtotal": "Subtotal",
+    "shippingNote": "Shipping and taxes calculated at checkout",
+    "checkout": "Checkout"
   },
   "features": {
     "title": "Why Choose MEM?",
@@ -80,6 +115,7 @@
       "email": "Email",
       "message": "Message",
       "submit": "Send Message",
+      "sending": "Sending...",
       "success": "Message sent successfully!",
       "error": "There was an error. Please try again."
     },
@@ -87,7 +123,8 @@
       "email": "Email",
       "phone": "Phone",
       "address": "Address"
-    }
+    },
+    "mapPlaceholder": "Location map"
   },
   "newsletter": {
     "title": "Join Our Community",

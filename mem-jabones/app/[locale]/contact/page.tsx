@@ -101,7 +101,7 @@ export default function ContactPage() {
                   className="w-full flex items-center justify-center space-x-2 px-8 py-4 bg-primary-600 text-white font-semibold rounded-lg hover:bg-primary-700 transition-colors duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                   <Send className="h-5 w-5" />
-                  <span>{status === 'loading' ? 'Enviando...' : t('form.submit')}</span>
+                  <span>{status === 'loading' ? t('form.sending') : t('form.submit')}</span>
                 </button>
 
                 {status === 'success' && (
@@ -153,7 +153,7 @@ export default function ContactPage() {
 
               {/* Map Placeholder */}
               <div className="aspect-video bg-cream-200 rounded-2xl flex items-center justify-center">
-                <span className="text-stone-400">Mapa de ubicación</span>
+                <span className="text-stone-400">{t('mapPlaceholder')}</span>
               </div>
             </div>
           </div>

@@ -14,10 +14,20 @@ export function useTranslations(namespace?: string) {
   const locale = (params?.locale as string) || 'es';
   const localeMessages = messages[locale as keyof typeof messages] || messages.es;
 
-  function t(key: string) {
+  function t(key: string, values?: Record<string, string | number>) {
     const keys = namespace ? `${namespace}.${key}` : key;
-    const value = keys.split('.').reduce((obj: any, k) => obj?.[k], localeMessages);
-    return value || key;
+    let value = keys.split('.').reduce((obj: any, k) => obj?.[k], localeMessages);
+    
+    if (!value) return key;
+    
+    // Simple interpolation for {count} and other variables
+    if (values && typeof value === 'string') {
+      Object.entries(values).forEach(([k, v]) => {
+        value = (value as string).replace(`{${k}}`, String(v));
+      });
+    }
+    
+    return value;
   }
 
   return t;

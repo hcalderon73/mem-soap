@@ -3,12 +3,13 @@
 import { useCart } from '@/lib/cart/CartContext';
 import { X, Plus, Minus, ShoppingBag, Trash2, AlertCircle } from 'lucide-react';
 import Link from 'next/link';
-import { useLocale } from '@/lib/i18n/useTranslations';
+import { useLocale, useTranslations } from '@/lib/i18n/useTranslations';
 import { cn } from '@/lib/utils';
 
 export default function CartDrawer() {
   const { items, isOpen, setIsOpen, removeItem, updateQuantity, totalPrice, clearCart } = useCart();
   const locale = useLocale();
+  const t = useTranslations('cart');
 
   return (
     <>
@@ -32,12 +33,12 @@ export default function CartDrawer() {
         <div className="flex items-center justify-between p-6 border-b border-stone-200">
           <div className="flex items-center space-x-2">
             <ShoppingBag className="h-6 w-6 text-primary-600" />
-            <h2 className="text-xl font-bold text-stone-800">Tu Carrito</h2>
+            <h2 className="text-xl font-bold text-stone-800">{t('title')}</h2>
           </div>
           <button
             onClick={() => setIsOpen(false)}
             className="p-2 hover:bg-stone-100 rounded-full transition-colors"
-            aria-label="Cerrar carrito"
+            aria-label={t('close')}
           >
             <X className="h-6 w-6 text-stone-600" />
           </button>
@@ -48,13 +49,13 @@ export default function CartDrawer() {
           {items.length === 0 ? (
             <div className="flex flex-col items-center justify-center h-full text-center">
               <ShoppingBag className="h-16 w-16 text-stone-300 mb-4" />
-              <p className="text-stone-600 text-lg mb-2">Tu carrito está vacío</p>
-              <p className="text-stone-400 text-sm mb-6">¡Agrega algunos productos!</p>
+              <p className="text-stone-600 text-lg mb-2">{t('empty')}</p>
+              <p className="text-stone-400 text-sm mb-6">{t('emptyMessage')}</p>
               <button
                 onClick={() => setIsOpen(false)}
                 className="px-6 py-3 bg-primary-600 text-white rounded-full font-medium hover:bg-primary-700 transition-colors"
               >
-                Continuar Comprando
+                {t('continueShopping')}
               </button>
             </div>
           ) : (
@@ -100,7 +101,7 @@ export default function CartDrawer() {
                       {maxReached && (
                         <p className="text-amber-600 text-xs mt-1 flex items-center">
                           <AlertCircle className="w-3 h-3 mr-1" />
-                          Máximo disponible
+                          {t('stockMax')}
                         </p>
                       )}
 
@@ -109,7 +110,7 @@ export default function CartDrawer() {
                         <button
                           onClick={() => updateQuantity(item.id, item.quantity - 1)}
                           className="p-1 hover:bg-stone-200 rounded transition-colors"
-                          aria-label="Disminuir cantidad"
+                          aria-label={t('decreaseQty')}
                         >
                           <Minus className="h-4 w-4 text-stone-600" />
                         </button>
@@ -120,7 +121,7 @@ export default function CartDrawer() {
                           onClick={() => updateQuantity(item.id, item.quantity + 1)}
                           disabled={maxReached}
                           className="p-1 hover:bg-stone-200 rounded transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
-                          aria-label="Aumentar cantidad"
+                          aria-label={t('increaseQty')}
                         >
                           <Plus className="h-4 w-4 text-stone-600" />
                         </button>
@@ -129,8 +130,8 @@ export default function CartDrawer() {
                       {/* Stock Info */}
                       <p className="text-xs text-stone-500 mt-1">
                         {availableToAdd > 0 
-                          ? `Puedes agregar ${availableToAdd} más` 
-                          : 'Stock máximo alcanzado'}
+                          ? t('stockAvailable', { count: availableToAdd })
+                          : t('stockReached')}
                       </p>
                     </div>
 
@@ -138,7 +139,7 @@ export default function CartDrawer() {
                     <button
                       onClick={() => removeItem(item.id)}
                       className="p-2 hover:bg-red-50 rounded-lg transition-colors self-start"
-                      aria-label="Eliminar producto"
+                      aria-label={t('remove')}
                     >
                       <Trash2 className="h-5 w-5 text-red-500" />
                     </button>
@@ -152,7 +153,7 @@ export default function CartDrawer() {
                   onClick={clearCart}
                   className="w-full py-2 text-red-500 text-sm hover:text-red-600 transition-colors"
                 >
-                  Vaciar carrito
+                  {t('clear')}
                 </button>
               )}
             </div>
@@ -163,22 +164,22 @@ export default function CartDrawer() {
         {items.length > 0 && (
           <div className="border-t border-stone-200 p-6 space-y-4">
             <div className="flex justify-between items-center">
-              <span className="text-stone-600">Subtotal</span>
+              <span className="text-stone-600">{t('subtotal')}</span>
               <span className="text-2xl font-bold text-stone-800">
                 €{totalPrice.toFixed(2)}
               </span>
             </div>
             <p className="text-sm text-stone-400">
-              Envío e impuestos calculados al finalizar la compra
+              {t('shippingNote')}
             </p>
             <button className="w-full py-4 bg-primary-600 text-white font-semibold rounded-full hover:bg-primary-700 transition-colors">
-              Finalizar Compra
+              {t('checkout')}
             </button>
             <button
               onClick={() => setIsOpen(false)}
               className="w-full py-3 text-primary-600 font-medium hover:text-primary-700 transition-colors"
             >
-              Continuar Comprando
+              {t('continueShopping')}
             </button>
           </div>
         )}
