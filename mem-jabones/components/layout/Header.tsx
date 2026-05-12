@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { Menu, X } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { useTranslations, useLocale } from '@/lib/i18n/useTranslations';
@@ -27,11 +28,16 @@ export default function Header() {
           {/* Logo */}
           <Link 
             href={`/${locale}/`} 
-            className="flex items-center space-x-2"
+            className="flex items-center"
           >
-            <span className="text-2xl font-bold text-primary-700" style={{ fontFamily: 'var(--font-display)' }}>
-              MEM
-            </span>
+            <Image
+              src="/logo.svg"
+              alt="MEM Jabones"
+              width={120}
+              height={40}
+              className="h-10 w-auto"
+              priority
+            />
           </Link>
 
           {/* Desktop Navigation */}

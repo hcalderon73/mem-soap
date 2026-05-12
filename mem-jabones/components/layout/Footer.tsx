@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { Instagram, Facebook, Mail, Phone, MapPin } from 'lucide-react';
 import { useLocale, useTranslations } from '@/lib/i18n/useTranslations';
 
@@ -15,12 +16,13 @@ export default function Footer() {
           {/* Brand */}
           <div className="space-y-4">
             <Link href={`/${locale}/`} className="inline-block">
-              <span 
-                className="text-3xl font-bold text-primary-400"
-                style={{ fontFamily: 'var(--font-display)' }}
-              >
-                MEM
-              </span>
+              <Image
+                src="/logo.svg"
+                alt="MEM Jabones"
+                width={100}
+                height={35}
+                className="h-9 w-auto brightness-150"
+              />
             </Link>
             <p className="text-stone-400 text-sm leading-relaxed">
               {t('description')}
