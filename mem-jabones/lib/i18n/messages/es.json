@@ -42,8 +42,12 @@
       "outOfStock": "Sin stock",
       "lowStock": "Solo quedan {count} unidades",
       "inStock": "En stock ({count} disponibles)",
-      "soldOut": "Agotado"
-    }
+      "soldOut": "Agotado",
+      "badgeSoldOut": "Agotado",
+      "badgeLastUnits": "¡Últimas {count}!",
+      "inStockShort": "En stock"
+    },
+    "add": "Añadir"
   },
   "product": {
     "ingredients": "Ingredientes",

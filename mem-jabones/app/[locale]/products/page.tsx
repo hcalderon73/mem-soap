@@ -72,12 +72,12 @@ export default function ProductsPage() {
                       {/* Stock Badge */}
                       {isOutOfStock && (
                         <div className="absolute top-4 right-4 px-3 py-1 bg-red-500 text-white text-sm font-medium rounded-full">
-                          Agotado
+                          {t('stock.badgeSoldOut')}
                         </div>
                       )}
                       {!isOutOfStock && availableStock <= 3 && (
                         <div className="absolute top-4 right-4 px-3 py-1 bg-amber-500 text-white text-sm font-medium rounded-full">
-                          ¡Últimas {availableStock}!
+                          {t('stock.badgeLastUnits', { count: availableStock })}
                         </div>
                       )}
                     </div>
@@ -97,15 +97,15 @@ export default function ProductsPage() {
                       {isOutOfStock ? (
                         <span className="text-red-600 text-sm font-medium flex items-center">
                           <AlertCircle className="w-4 h-4 mr-1" />
-                          Sin stock
+                          {t('stock.outOfStock')}
                         </span>
                       ) : availableStock <= 3 ? (
                         <span className="text-amber-600 text-sm font-medium">
-                          Solo quedan {availableStock} unidades
+                          {t('stock.lowStock', { count: availableStock })}
                         </span>
                       ) : (
                         <span className="text-green-600 text-sm font-medium">
-                          En stock
+                          {t('stock.inStockShort')}
                         </span>
                       )}
                     </div>
@@ -119,7 +119,7 @@ export default function ProductsPage() {
                         disabled={!canAdd}
                         className="px-4 py-2 bg-primary-600 text-white rounded-full hover:bg-primary-700 transition-colors active:scale-95 disabled:bg-stone-300 disabled:cursor-not-allowed"
                       >
-                        {isOutOfStock ? 'Agotado' : 'Añadir'}
+                        {isOutOfStock ? t('stock.soldOut') : t('add')}
                       </button>
                     </div>
                   </div>
