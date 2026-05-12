@@ -22,9 +22,9 @@
   --color-earth: #8b7355;
   --color-stone-warm: #a8a29e;
 
-  /* Fuentes */
-  --font-sans: 'Cabin', ui-sans-serif, system-ui, sans-serif;
-  --font-display: 'Yellowtail', cursive;
+  /* Fuentes - Cormorant para títulos, Montserrat para texto */
+  --font-sans: 'Montserrat', ui-sans-serif, system-ui, sans-serif;
+  --font-display: 'Cormorant', serif;
 
   /* Animaciones */
   --animate-fade-in: fade-in 0.5s ease-out;

@@ -1,17 +1,18 @@
 import type { Metadata } from "next";
-import { Cabin, Yellowtail } from "next/font/google";
+import { Cormorant, Montserrat } from "next/font/google";
 import "./globals.css";
 
-const cabin = Cabin({
+const cormorant = Cormorant({
   subsets: ["latin"],
-  variable: "--font-sans",
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-display",
   display: "swap",
 });
 
-const yellowtail = Yellowtail({
-  weight: "400",
+const montserrat = Montserrat({
+  weight: ["300", "400", "500", "600", "700"],
   subsets: ["latin"],
-  variable: "--font-display",
+  variable: "--font-sans",
   display: "swap",
 });
 
@@ -26,7 +27,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html className={`${cabin.variable} ${yellowtail.variable}`}>
+    <html className={`${cormorant.variable} ${montserrat.variable}`}>
       <body className="min-h-screen flex flex-col">
         {children}
       </body>
