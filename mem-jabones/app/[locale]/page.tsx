@@ -2,7 +2,6 @@
 
 import { Leaf, Heart, Recycle, Shield } from 'lucide-react';
 import Link from 'next/link';
-import Image from 'next/image';
 import { useTranslations } from '@/lib/i18n/useTranslations';
 
 export default function HomePage() {
@@ -33,55 +32,46 @@ export default function HomePage() {
 
   return (
     <div className="animate-fade-in">
-      {/* Hero Section with Image */}
-      <section className="relative bg-gradient-to-br from-primary-50 via-cream-50 to-cream-100 py-16 lg:py-24 overflow-hidden">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            {/* Text Content */}
-            <div className="text-center lg:text-left">
-              <h1 
-                className="text-4xl md:text-5xl lg:text-6xl font-bold text-stone-800 mb-6 leading-tight"
-                style={{ fontFamily: 'var(--font-display)' }}
+      {/* Hero Section with Background Image */}
+      <section 
+        className="relative min-h-[70vh] flex items-center justify-center overflow-hidden"
+        style={{
+          backgroundImage: 'url(/images/hero/hero-image.png)',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+        }}
+      >
+        {/* Dark overlay for contrast */}
+        <div className="absolute inset-0 bg-stone-900/50" />
+        
+        {/* Content */}
+        <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 py-20">
+          <div className="max-w-3xl mx-auto text-center">
+            <h1 
+              className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 drop-shadow-lg"
+              style={{ fontFamily: 'var(--font-display)' }}
+            >
+              {t('hero.title')}
+            </h1>
+            <p className="text-xl md:text-2xl text-white/90 mb-4 font-medium drop-shadow-md">
+              {t('hero.subtitle')}
+            </p>
+            <p className="text-lg text-white/80 mb-8 max-w-2xl mx-auto drop-shadow">
+              {t('hero.description')}
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                href="products/"
+                className="inline-flex items-center justify-center px-8 py-4 bg-primary-600 text-white font-semibold rounded-full hover:bg-primary-500 transition-colors duration-200 shadow-xl hover:shadow-2xl"
               >
-                {t('hero.title')}
-              </h1>
-              <p className="text-xl md:text-2xl text-primary-700 mb-4 font-medium">
-                {t('hero.subtitle')}
-              </p>
-              <p className="text-lg text-stone-600 mb-8 max-w-xl mx-auto lg:mx-0">
-                {t('hero.description')}
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                <Link
-                  href="products/"
-                  className="inline-flex items-center justify-center px-8 py-4 bg-primary-600 text-white font-semibold rounded-full hover:bg-primary-700 transition-colors duration-200 shadow-lg hover:shadow-xl"
-                >
-                  {t('hero.ctaPrimary')}
-                </Link>
-                <Link
-                  href="about/"
-                  className="inline-flex items-center justify-center px-8 py-4 bg-white text-primary-700 font-semibold rounded-full border-2 border-primary-200 hover:border-primary-300 hover:bg-primary-50 transition-all duration-200"
-                >
-                  {t('hero.ctaSecondary')}
-                </Link>
-              </div>
-            </div>
-
-            {/* Hero Image */}
-            <div className="relative">
-              <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl">
-                <Image
-                  src="/images/hero/hero-image.png"
-                  alt="Elaboración artesanal de jabones MEM"
-                  fill
-                  className="object-cover"
-                  priority
-                  sizes="(max-width: 768px) 100vw, 50vw"
-                />
-              </div>
-              {/* Decorative element */}
-              <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-primary-200 rounded-full opacity-50 blur-2xl" />
-              <div className="absolute -top-4 -left-4 w-32 h-32 bg-primary-300 rounded-full opacity-30 blur-3xl" />
+                {t('hero.ctaPrimary')}
+              </Link>
+              <Link
+                href="about/"
+                className="inline-flex items-center justify-center px-8 py-4 bg-white/20 backdrop-blur-sm text-white font-semibold rounded-full border-2 border-white/40 hover:bg-white/30 hover:border-white/60 transition-all duration-200"
+              >
+                {t('hero.ctaSecondary')}
+              </Link>
             </div>
           </div>
         </div>
